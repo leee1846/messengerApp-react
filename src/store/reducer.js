@@ -4,15 +4,18 @@ import face from "../image/face.jpg";
 const initialState = [
   {
     id: 1,
-    image: face,
+    userName: "jake",
+    message: "라라라ㅏ라라ㅏㄹ",
   },
   {
     id: 2,
-    image: face,
+    userName: "james",
+    message: "라라라ㅏ라라ㅏㄹ3",
   },
   {
     id: 3,
-    image: face,
+    userName: "jake",
+    message: "라라라ㅏ라라ㅏㄹ2",
   },
 ];
 
@@ -20,10 +23,8 @@ export const friendsReducer = createSlice({
   name: "friends",
   initialState,
   reducers: {
-    increase(state) {
-      return state;
-    },
+    sendMessage: (state, { payload }) => [...state, payload.newContent],
   },
 });
 
-export const { increase } = friendsReducer.actions;
+export const { sendMessage } = friendsReducer.actions;

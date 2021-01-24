@@ -1,36 +1,16 @@
 import React from "react";
 import * as Styled from "./ChatContent.style";
 
-const ChatContent = () => {
+const ChatContent = ({ initialChatState }) => {
   return (
     <Styled.ChatContainer>
-      <Styled.ContentLine>
-        <Styled.ContentBox>
-          <Styled.Content>
-            움햐햐햐햐햐햐햐햐햐햐햐햐햐햐햐햐햐햐햐햐 햐햐햐햐 햐햐햐햐
-            햐햐햐햐 햐햐햐햐 햐햐햐햐 햐햐햐햐 햐햐햐햐 햐햐햐햐 햐햐햐햐
-            햐햐햐햐 햐햐햐햐 햐햐햐햐 햐햐햐햐 햐햐햐햐
-          </Styled.Content>
-        </Styled.ContentBox>
-      </Styled.ContentLine>
-      <Styled.ContentLine>
-        <Styled.ContentBox>
-          <Styled.Content>
-            움햐햐햐햐햐햐햐햐햐햐햐햐햐햐햐햐햐햐햐햐 햐햐햐햐 햐햐햐햐
-            햐햐햐햐 햐햐햐햐 햐햐햐햐 햐햐햐햐 햐햐햐햐 햐햐햐햐 햐햐햐햐
-            햐햐햐햐 햐햐햐햐 햐햐햐햐 햐햐햐햐 햐햐햐햐
-          </Styled.Content>
-        </Styled.ContentBox>
-      </Styled.ContentLine>
-      <Styled.ContentLine>
-        <Styled.ContentBox>
-          <Styled.Content>
-            움햐햐햐햐햐햐햐햐햐햐햐햐햐햐햐햐햐햐햐햐 햐햐햐햐 햐햐햐햐
-            햐햐햐햐 햐햐햐햐 햐햐햐햐 햐햐햐햐 햐햐햐햐 햐햐햐햐 햐햐햐햐
-            햐햐햐햐 햐햐햐햐 햐햐햐햐 햐햐햐햐 햐햐햐햐
-          </Styled.Content>
-        </Styled.ContentBox>
-      </Styled.ContentLine>
+      {initialChatState.map((state) => (
+        <Styled.ContentLine>
+          <Styled.ContentBox>
+            <Styled.Content>{state.message}</Styled.Content>
+          </Styled.ContentBox>
+        </Styled.ContentLine>
+      ))}
     </Styled.ChatContainer>
   );
 };
