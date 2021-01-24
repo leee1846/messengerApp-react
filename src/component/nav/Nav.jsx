@@ -1,12 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import * as Styled from "./Nav.style";
 
 const Nav = () => {
   return (
-    <div>
-      <Link to='/'>친구</Link>
-      <Link to='/chat'>대화</Link>
-    </div>
+    <Styled.NavContainer>
+      <Styled.LinkStyle to='/'>
+        <Styled.FriendsIcon />
+      </Styled.LinkStyle>
+      <Styled.LinkStyle to='/chat'>
+        <Styled.ChattingIcon />
+      </Styled.LinkStyle>
+    </Styled.NavContainer>
   );
 };
 
