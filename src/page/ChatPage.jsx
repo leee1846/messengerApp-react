@@ -6,8 +6,9 @@ import * as Styled from "./ChatPage.style";
 
 const ChatPage = () => {
   const [newUsername, setUserName] = useState("");
+  const [intro, setIntro] = useState("");
 
-  const initialChatState = useSelector((state) => state.friendReducer);
+  const initialChatState = useSelector((state) => state.chatReducer);
   return (
     <div>
       <Styled.ChatContainer>
@@ -20,7 +21,12 @@ const ChatPage = () => {
           />
         ))}
       </Styled.ChatContainer>
-      <Input newUsername={newUsername} setUserName={setUserName} />
+      <Input
+        newUsername={newUsername}
+        setUserName={setUserName}
+        setIntro={setIntro}
+        intro={intro}
+      />
     </div>
   );
 };

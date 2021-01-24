@@ -1,8 +1,9 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
-import { friendsReducer } from "./reducer";
+import { chatReducer, introReducer } from "./reducer";
 
 const reducer = combineReducers({
-  friendReducer: friendsReducer.reducer,
+  chatReducer: chatReducer.reducer,
+  introReducer: introReducer.reducer,
 });
 
 export default configureStore({ reducer });
