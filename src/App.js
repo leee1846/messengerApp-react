@@ -1,12 +1,12 @@
 import React from "react";
 import { GlobalStyle } from "./style/GlobalStyle";
-import MessengerApp from "./page/MessengerApp";
+import PageRouter from "./page/PageRouter";
 
 const App = () => {
   return (
     <>
       <GlobalStyle />
-      <MessengerApp />
+      <PageRouter />
     </>
   );
 };
