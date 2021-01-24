@@ -4,10 +4,9 @@ import { useDispatch } from "react-redux";
 import { sendMessage } from "../../store/reducer";
 import face from "../../image/face.jpg";
 
-const Input = () => {
+const Input = ({ newUsername, setUserName }) => {
   const dispatch = useDispatch();
   const [input, setInput] = useState("");
-  const [userName, setUserName] = useState("");
 
   let newId = useRef(4);
 
@@ -17,7 +16,7 @@ const Input = () => {
     e.preventDefault();
     const newContent = {
       id: newId.current,
-      userName: userName,
+      username: newUsername,
       message: input,
     };
     dispatch(sendMessage({ newContent }));

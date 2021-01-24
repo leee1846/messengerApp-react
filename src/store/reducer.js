@@ -4,17 +4,17 @@ import face from "../image/face.jpg";
 const initialState = [
   {
     id: 1,
-    userName: "jake",
+    username: "jake",
     message: "라라라ㅏ라라ㅏㄹ",
   },
   {
     id: 2,
-    userName: "james",
+    username: "james",
     message: "라라라ㅏ라라ㅏㄹ3",
   },
   {
     id: 3,
-    userName: "jake",
+    username: "jake",
     message: "라라라ㅏ라라ㅏㄹ2",
   },
 ];
