@@ -18,10 +18,12 @@ const iconStyle = css`
 
 export const FriendsIcon = Styled(SupervisorAccountIcon)`
   ${iconStyle}
+  color:${({ focus }) => focus && `dodgerblue`};
 `;
 
 export const ChattingIcon = Styled(ChatIcon)`
   ${iconStyle}
+  color:${({ focus }) => focus && `dodgerblue`};
 `;
 
 export const LinkStyle = Styled(Link)`
@@ -31,9 +33,9 @@ export const LinkStyle = Styled(Link)`
   border-right:2px solid #f0f0f0;
 
   &:hover ${ChattingIcon} {
-    color:dodgerblue;
+    color:skyblue;
   }
   &:hover ${FriendsIcon} {
-    color:dodgerblue;
+    color:skyblue;
   }
 `;
